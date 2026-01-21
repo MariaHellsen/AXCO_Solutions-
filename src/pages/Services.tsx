@@ -2,7 +2,9 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { TrendingUp, Target, Briefcase, Flag, Megaphone, ArrowRight } from "lucide-react";
+import { useParallax } from "@/hooks/use-parallax";
 
+import heroImage from "@/assets/hero-about-europe.jpg";
 import europeMapImg from "@/assets/service-europe-map.jpg";
 import euSymbolImg from "@/assets/service-eu-symbol.jpg";
 import frankfurtImg from "@/assets/service-frankfurt.jpg";
@@ -53,16 +55,29 @@ const services = [
 ];
 
 const ServicesPage = () => {
+  const parallaxOffset = useParallax(0.3);
+
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-primary text-primary-foreground section-padding">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative min-h-[50vh] flex items-center overflow-hidden">
+        <div
+          className="absolute inset-0 w-full h-[120%] -top-[10%]"
+          style={{ transform: `translateY(${parallaxOffset}px)` }}
+        >
+          <img
+            src={heroImage}
+            alt="European business landscape"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-primary/50" />
+        </div>
+        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
               Our Services
             </h1>
-            <p className="mt-6 text-xl text-primary-foreground/80 leading-relaxed">
+            <p className="mt-6 text-xl text-white/90 leading-relaxed">
               Structured services designed to reduce risk and accelerate your 
               European market entry—without replacing your internal sales team.
             </p>
