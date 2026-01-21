@@ -1,224 +1,160 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Globe, Users, Languages, Award } from "lucide-react";
-import heroAboutImage from "@/assets/hero-about-europe.jpg";
-import { useParallax } from "@/hooks/use-parallax";
+import { ArrowRight, Globe, Users, Languages, Award, MapPin } from "lucide-react";
 
-const stats = [
-  {
-    icon: Award,
-    value: "20+",
-    label: "Years of Experience",
-    description: "Two decades helping technology companies expand into Europe.",
-  },
-  {
-    icon: Globe,
-    value: "25+",
-    label: "Countries",
-    description: "Experience across European markets from Nordic to Mediterranean.",
-  },
-  {
-    icon: Languages,
-    value: "8+",
-    label: "Languages",
-    description: "Multilingual team with native understanding of local markets.",
-  },
-  {
-    icon: Users,
-    value: "500+",
-    label: "Partners in Network",
-    description: "Established relationships with distributors and integrators.",
-  },
+const highlights = [
+  { icon: Award, label: "20+ Years Experience" },
+  { icon: Globe, label: "5 Countries Lived In" },
+  { icon: Languages, label: "6 Languages Spoken" },
+  { icon: Users, label: "Extensive Partner Network" },
 ];
 
-const values = [
-  {
-    title: "Integrity",
-    description:
-      "We provide honest assessments and realistic expectations. If we don't think we can help, we'll tell you.",
-  },
-  {
-    title: "Quality",
-    description:
-      "We focus on quality over quantity—in our research, our partner recommendations, and our introductions.",
-  },
-  {
-    title: "Partnership",
-    description:
-      "We work as an extension of your team, aligned with your goals and invested in your success.",
-  },
-  {
-    title: "Long-term View",
-    description:
-      "We build relationships and strategies for sustainable growth, not quick wins that don't last.",
-  },
-];
+const countries = ["Netherlands", "Austria", "UK", "Italy", "Croatia"];
+const languages = ["English", "German", "Italian", "Dutch", "French", "Russian"];
 
 const AboutPage = () => {
-  const parallaxOffset = useParallax(0.3);
-
   return (
     <Layout>
-      {/* Hero */}
-      <section className="relative min-h-[50vh] flex items-center overflow-hidden">
-        {/* Background Image with Parallax */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src={heroAboutImage}
-            alt="Beautiful European cities skyline"
-            className="w-full h-full object-cover"
-            style={{ transform: `translateY(${parallaxOffset}px) scale(1.1)` }}
-          />
-          <div className="absolute inset-0 hero-overlay" />
-        </div>
-        
-        {/* Content */}
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-primary-foreground animate-fade-in-up">
-              About AXCO Solutions
-            </h1>
-            <p className="mt-6 text-xl text-primary-foreground/80 leading-relaxed animate-fade-in-up delay-100">
-              Two decades of experience helping international technology companies 
-              understand, enter, and grow in European markets.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Story */}
-      <section className="section-padding bg-background">
+      {/* Hero Section - Split Layout */}
+      <section className="bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">
-                Our Story
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                AXCO Solutions was founded on a simple observation: many excellent 
-                technology companies struggle to expand into Europe—not because 
-                their products aren't good enough, but because they lack the local 
-                knowledge, relationships, and structured approach needed to succeed.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Over the past two decades, we've helped manufacturers from Asia, 
-                North America, Latin America, and other regions navigate European 
-                complexity. We've learned what works, what doesn't, and how to 
-                reduce the risk of market entry.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center py-12">
+            {/* Content */}
+            <div className="order-2 lg:order-1">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-1 bg-primary rounded-full" />
+                <span className="text-sm font-medium text-primary uppercase tracking-wider">About Us</span>
+              </div>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight tracking-tight mb-6">
+                Unlock Your Business Potential with Our Expertise in European Markets
+              </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Today, we continue to focus on what we do best: providing the 
-                research, insights, and introductions that help technology 
-                companies build successful European partnerships.
+                We are a passionate team of technology enthusiasts with over 20 years of experience 
+                driving business growth across Europe in the IT and Physical Security sectors.
               </p>
-            </div>
-            <div className="bg-slate-50 rounded-2xl p-8">
-              <div className="grid grid-cols-2 gap-6">
-                {stats.map((stat) => (
-                  <div key={stat.label} className="text-center p-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                      <stat.icon className="w-6 h-6 text-primary" />
+              
+              {/* Highlights */}
+              <div className="grid grid-cols-2 gap-4 mt-8">
+                {highlights.map((item) => (
+                  <div key={item.label} className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <item.icon className="w-5 h-5 text-primary" />
                     </div>
-                    <div className="text-2xl font-bold text-foreground">
-                      {stat.value}
-                    </div>
-                    <div className="text-sm font-medium text-muted-foreground">
-                      {stat.label}
-                    </div>
+                    <span className="text-sm font-medium text-foreground">{item.label}</span>
                   </div>
                 ))}
               </div>
             </div>
+
+            {/* Image Placeholder */}
+            <div className="order-1 lg:order-2">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 border-2 border-dashed border-slate-300">
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-400">
+                  <Users className="w-16 h-16 mb-4" />
+                  <span className="text-lg font-medium">Team Photo</span>
+                  <span className="text-sm">Placeholder for image</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Values */}
-      <section className="section-padding bg-slate-50">
+      {/* What Sets Us Apart */}
+      <section className="py-12 bg-slate-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              Our Values
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6 text-center">
+              What Sets Us Apart?
             </h2>
-            <p className="text-lg text-muted-foreground">
-              The principles that guide how we work with clients and partners.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {values.map((value) => (
-              <div key={value.title} className="p-8 rounded-xl bg-card card-elevated">
-                <h3 className="text-xl font-semibold text-foreground mb-3">
-                  {value.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {value.description}
-                </p>
+            <div className="bg-card rounded-xl p-8 shadow-sm">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                We bring more than just knowledge of the market—we bring a true understanding of the local 
+                cultures and business practices across Europe. With experience living and working in the 
+                Netherlands, Austria, the UK, Italy, and Croatia, and having traveled and worked across 
+                the continent, we speak the key languages of the region.
+              </p>
+              
+              {/* Countries & Languages */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                <div className="p-5 rounded-lg bg-slate-50">
+                  <div className="flex items-center gap-2 mb-3">
+                    <MapPin className="w-5 h-5 text-primary" />
+                    <h3 className="font-semibold text-foreground">Countries We've Lived In</h3>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {countries.map((country) => (
+                      <span key={country} className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full font-medium">
+                        {country}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="p-5 rounded-lg bg-slate-50">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Languages className="w-5 h-5 text-primary" />
+                    <h3 className="font-semibold text-foreground">Languages We Speak</h3>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {languages.map((lang) => (
+                      <span key={lang} className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full font-medium">
+                        {lang}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Expertise */}
-      <section className="section-padding bg-background">
+      {/* Network & Relationships */}
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-              Our European Expertise
-            </h2>
-            
-            <div className="space-y-6">
-              <div className="p-6 rounded-xl bg-slate-50">
-                <h3 className="text-lg font-semibold text-foreground mb-2">
-                  Geographic Coverage
-                </h3>
-                <p className="text-muted-foreground">
-                  We have experience across all major European markets including DACH 
-                  (Germany, Austria, Switzerland), Benelux, Nordics, UK & Ireland, 
-                  France, Iberia, Italy, and Central/Eastern Europe.
-                </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
+            {/* Image Placeholder */}
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 border-2 border-dashed border-slate-300">
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-400">
+                <Globe className="w-16 h-16 mb-4" />
+                <span className="text-lg font-medium">Network Visual</span>
+                <span className="text-sm">Placeholder for image</span>
               </div>
+            </div>
 
-              <div className="p-6 rounded-xl bg-slate-50">
-                <h3 className="text-lg font-semibold text-foreground mb-2">
-                  Industry Focus
-                </h3>
-                <p className="text-muted-foreground">
-                  Physical security, IT & networking, access control, traffic 
-                  management, and smart infrastructure. We understand the channels, 
-                  players, and dynamics in these sectors.
-                </p>
-              </div>
-
-              <div className="p-6 rounded-xl bg-slate-50">
-                <h3 className="text-lg font-semibold text-foreground mb-2">
-                  Language Capabilities
-                </h3>
-                <p className="text-muted-foreground">
-                  Our team works in English, German, Dutch, French, Spanish, 
-                  Italian, Portuguese, and other European languages—enabling 
-                  effective communication across markets.
-                </p>
-              </div>
+            {/* Content */}
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
+                Strong, Lasting Relationships
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                For more than two decades, we've cultivated strong, lasting relationships with an extensive 
+                network of Distributors, Installers, and System Integrators.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                These connections, built with care and trust, benefit the manufacturers we represent 
+                and those ready to join our growing portfolio.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-slate-50">
+      <section className="py-12 bg-primary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-4">
-            Let's Talk About Your European Goals
+          <h2 className="text-2xl sm:text-3xl font-bold text-primary-foreground mb-4">
+            We Are Here to Drive Your Success
           </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Schedule a free consultation to discuss your expansion plans.
+          <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+            Pioneering growth and ensuring your business thrives in the dynamic, fast-paced European market. 
+            Let us help you navigate the opportunities of tomorrow, today.
           </p>
           <Link to="/contact">
-            <Button variant="cta" size="xl">
-              Schedule a Free Consultation
+            <Button variant="secondary" size="xl" className="font-semibold">
+              Start the Conversation
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
