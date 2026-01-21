@@ -2,9 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { useParallax } from "@/hooks/use-parallax";
 
-import heroImage from "@/assets/hero-about-europe.jpg";
 import europeMapImg from "@/assets/service-europe-map.jpg";
 import euSymbolImg from "@/assets/service-eu-symbol.jpg";
 import frankfurtImg from "@/assets/service-frankfurt.jpg";
@@ -50,39 +48,26 @@ const services = [
 ];
 
 const ServicesPage = () => {
-  const parallaxOffset = useParallax(0.3);
-
   return (
     <Layout>
-      {/* Hero */}
-      <section className="relative min-h-[50vh] flex items-center overflow-hidden">
-        {/* Background Image with Parallax */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src={heroImage}
-            alt="European business district skyline"
-            className="w-full h-full object-cover scale-110"
-            style={{ transform: `translateY(${parallaxOffset}px) scale(1.1)` }}
-          />
-          <div className="absolute inset-0 hero-overlay" />
-        </div>
-        {/* Content */}
-        <div className="container mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight tracking-tight animate-fade-in-up">
-              Our Services
-            </h1>
-            <p className="mt-6 text-2xl sm:text-3xl text-primary-foreground/90 leading-relaxed max-w-3xl animate-fade-in-up delay-100">
-              Structured services designed to reduce risk and accelerate your European market entry—without replacing your internal sales team
-            </p>
+      {/* Page Header - Minimal with accent line */}
+      <section className="pt-12 pb-8 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-4 mb-4">
+            <div className="w-12 h-1 bg-primary rounded-full" />
+            <span className="text-sm font-medium text-primary uppercase tracking-wider">What We Offer</span>
           </div>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight tracking-tight">
+            Our Services
+          </h1>
+          <p className="mt-4 text-lg text-muted-foreground leading-relaxed max-w-2xl">
+            Structured services designed to reduce risk and accelerate your European market entry—without replacing your internal sales team
+          </p>
         </div>
-        {/* Bottom gradient fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10" />
       </section>
 
-      {/* Services Detail - Alternating Layout with Images */}
-      <section className="section-padding bg-background">
+      {/* Services Grid */}
+      <section className="pb-12 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {services.map((service) => (
