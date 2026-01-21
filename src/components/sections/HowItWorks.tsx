@@ -31,37 +31,37 @@ export function HowItWorks() {
   return (
     <section className="section-padding bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-6">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
             How It Works
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-2 text-lg text-muted-foreground">
             A structured, transparent process designed to reduce risk and deliver results.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-2">
           {steps.map((step, index) => (
             <div
               key={step.number}
-              className="relative p-6 animate-fade-in-up"
+              className="relative p-4 animate-fade-in-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Connector line */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-border z-0">
+                <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-border z-0">
                   <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary" />
                 </div>
               )}
 
               {/* Step number */}
-              <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-6 relative z-10">
-                <span className="text-xl font-bold text-primary-foreground">
+              <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center mb-4 relative z-10">
+                <span className="text-lg font-bold text-primary-foreground">
                   {step.number}
                 </span>
               </div>
 
-              <h3 className="text-lg font-semibold text-foreground mb-3">
+              <h3 className="text-lg font-semibold text-foreground mb-2">
                 {step.title}
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
@@ -72,7 +72,7 @@ export function HowItWorks() {
         </div>
 
         {/* Trust indicators */}
-        <div className="mt-16 pt-12 border-t border-border">
+        <div className="mt-6 pt-5 border-t border-border">
           <div className="flex flex-wrap justify-center gap-x-12 gap-y-4 text-muted-foreground">
             <div className="flex items-center gap-2">
               <CheckCircle className="w-5 h-5 text-success" />

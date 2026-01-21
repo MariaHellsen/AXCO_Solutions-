@@ -22,21 +22,21 @@ export function ChallengesSection() {
     <section className="section-padding bg-gradient-to-b from-background to-secondary/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-10">
         {/* Intro */}
-        <div className="max-w-3xl mx-auto text-center mb-12">
+        <div className="max-w-3xl mx-auto text-center mb-5">
           <p className="text-lg text-muted-foreground leading-relaxed">
             Entering the European market is a critical step for global growth, yet its complexity—unfamiliar business cultures, fragmented channels, and high entry barriers—often stops even the most ambitious manufacturers before they begin.
           </p>
         </div>
 
         {/* Challenges Header */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-4">
           <h2 className="text-2xl sm:text-3xl font-semibold text-foreground">
             Do these challenges sound familiar?
           </h2>
         </div>
 
         {/* Challenge Cards */}
-        <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto mb-14">
+        <div className="grid gap-3 md:grid-cols-3 max-w-5xl mx-auto mb-6">
           {challenges.map((challenge, index) => (
             <div
               key={index}
