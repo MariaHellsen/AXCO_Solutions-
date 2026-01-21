@@ -84,33 +84,29 @@ const ServicesPage = () => {
       {/* Services Detail - Alternating Layout with Images */}
       <section className="section-padding bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-12">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {services.map((service) => (
               <div
                 key={service.id}
                 id={service.id}
-                className={`flex flex-col ${
-                  index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-                } gap-6 items-center`}
+                className="group bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-elegant transition-shadow duration-300"
               >
-                {/* Image - 40% smaller */}
-                <div className="w-full lg:w-[30%]">
-                  <div className="relative overflow-hidden rounded-xl shadow-elegant group">
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="w-full h-40 md:h-48 object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
-                  </div>
+                {/* Image */}
+                <div className="relative overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-36 object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
                 </div>
 
                 {/* Content */}
-                <div className="w-full lg:w-[70%] space-y-3">
-                  <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                <div className="p-5">
+                  <h2 className="text-xl font-bold text-foreground mb-2">
                     {service.title}
                   </h2>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed text-sm">
                     {service.description}
                   </p>
                 </div>
