@@ -2,6 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Globe, Users, Languages, Award } from "lucide-react";
+import heroAboutImage from "@/assets/hero-about-europe.jpg";
 
 const stats = [
   {
@@ -57,13 +58,24 @@ const AboutPage = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-primary text-primary-foreground section-padding">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative min-h-[50vh] flex items-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={heroAboutImage}
+            alt="Beautiful European cities skyline"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 hero-overlay" />
+        </div>
+        
+        {/* Content */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
+            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-primary-foreground animate-fade-in-up">
               About AXCO Solutions
             </h1>
-            <p className="mt-6 text-xl text-primary-foreground/80 leading-relaxed">
+            <p className="mt-6 text-xl text-primary-foreground/80 leading-relaxed animate-fade-in-up delay-100">
               Two decades of experience helping international technology companies 
               understand, enter, and grow in European markets.
             </p>
