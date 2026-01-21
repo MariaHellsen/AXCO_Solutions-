@@ -77,6 +77,8 @@ const ServicesPage = () => {
             </p>
           </div>
         </div>
+        {/* Bottom gradient fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10" />
       </section>
 
       {/* Services Detail - Alternating Layout with Images */}
