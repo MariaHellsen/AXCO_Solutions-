@@ -23,7 +23,7 @@ export function HeroSection() {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight tracking-tight animate-fade-in-up">
             Expand Your Technology Business into Europe with AXCO Solutions
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-primary-foreground/80 leading-relaxed max-w-2xl animate-fade-in-up delay-100">
+          <p className="mt-6 text-xl sm:text-2xl text-primary-foreground/90 leading-relaxed max-w-3xl animate-fade-in-up delay-100">
             The fastest, lowest-risk way for manufacturers to build real business in Europe
           </p>
         </div>
