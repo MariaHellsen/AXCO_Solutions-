@@ -1,7 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { TrendingUp, Target, Briefcase, Flag, Megaphone, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useParallax } from "@/hooks/use-parallax";
 
 import heroImage from "@/assets/hero-about-europe.jpg";
@@ -14,7 +14,6 @@ import trainBridgeImg from "@/assets/service-train-bridge.jpg";
 const services = [
   {
     id: "market-assessment",
-    icon: TrendingUp,
     title: "Market Assessment & Business Expansion",
     description:
       "We evaluate opportunities for entering new markets or expanding existing operations, providing you with actionable insights to grow your business.",
@@ -22,7 +21,6 @@ const services = [
   },
   {
     id: "commercial-development",
-    icon: Target,
     title: "Targeted Commercial Development",
     description:
       "We help you build new commercial contacts in key sectors identified by you or suggested by our team, ensuring that every opportunity aligns with your business goals.",
@@ -30,7 +28,6 @@ const services = [
   },
   {
     id: "mission-organization",
-    icon: Briefcase,
     title: "Mission Organization & Management",
     description:
       "Our team organizes and manages business missions, facilitating valuable meetings and partnerships that drive growth.",
@@ -38,7 +35,6 @@ const services = [
   },
   {
     id: "trade-show",
-    icon: Flag,
     title: "Strategic Trade Show Amplification",
     description:
       "Our team helps you choose the right trade show for your goals and arrange the best way of representation, logistics, side events, potential customer visits.",
@@ -46,7 +42,6 @@ const services = [
   },
   {
     id: "marketing",
-    icon: Megaphone,
     title: "Marketing & Communication Strategy",
     description:
       "We develop effective marketing and communication initiatives to strengthen your presence and impact in international markets.",
@@ -95,25 +90,22 @@ const ServicesPage = () => {
                 id={service.id}
                 className={`flex flex-col ${
                   index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-                } gap-8 items-center`}
+                } gap-6 items-center`}
               >
-                {/* Image */}
-                <div className="w-full lg:w-1/2">
-                  <div className="relative overflow-hidden rounded-2xl shadow-elegant group">
+                {/* Image - 40% smaller */}
+                <div className="w-full lg:w-[30%]">
+                  <div className="relative overflow-hidden rounded-xl shadow-elegant group">
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-64 md:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-40 md:h-48 object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="w-full lg:w-1/2 space-y-4">
-                  <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center">
-                    <service.icon className="w-7 h-7 text-primary-foreground" />
-                  </div>
+                <div className="w-full lg:w-[70%] space-y-3">
                   <h2 className="text-2xl md:text-3xl font-bold text-foreground">
                     {service.title}
                   </h2>
