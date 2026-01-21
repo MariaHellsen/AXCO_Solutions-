@@ -1,7 +1,13 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { TrendingUp, Target, Briefcase, Flag, Megaphone, ArrowRight, CheckCircle, XCircle } from "lucide-react";
+import { TrendingUp, Target, Briefcase, Flag, Megaphone, ArrowRight } from "lucide-react";
+
+import europeMapImg from "@/assets/service-europe-map.jpg";
+import euSymbolImg from "@/assets/service-eu-symbol.jpg";
+import frankfurtImg from "@/assets/service-frankfurt.jpg";
+import euFlagsImg from "@/assets/service-eu-flags.jpg";
+import trainBridgeImg from "@/assets/service-train-bridge.jpg";
 
 const services = [
   {
@@ -10,6 +16,7 @@ const services = [
     title: "Market Assessment & Business Expansion",
     description:
       "We evaluate opportunities for entering new markets or expanding existing operations, providing you with actionable insights to grow your business.",
+    image: europeMapImg,
   },
   {
     id: "commercial-development",
@@ -17,6 +24,7 @@ const services = [
     title: "Targeted Commercial Development",
     description:
       "We help you build new commercial contacts in key sectors identified by you or suggested by our team, ensuring that every opportunity aligns with your business goals.",
+    image: euSymbolImg,
   },
   {
     id: "mission-organization",
@@ -24,6 +32,7 @@ const services = [
     title: "Mission Organization & Management",
     description:
       "Our team organizes and manages business missions, facilitating valuable meetings and partnerships that drive growth.",
+    image: frankfurtImg,
   },
   {
     id: "trade-show",
@@ -31,6 +40,7 @@ const services = [
     title: "Strategic Trade Show Amplification",
     description:
       "Our team helps you choose the right trade show for your goals and arrange the best way of representation, logistics, side events, potential customer visits.",
+    image: euFlagsImg,
   },
   {
     id: "marketing",
@@ -38,6 +48,7 @@ const services = [
     title: "Marketing & Communication Strategy",
     description:
       "We develop effective marketing and communication initiatives to strengthen your presence and impact in international markets.",
+    image: trainBridgeImg,
   },
 ];
 
@@ -59,78 +70,42 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* What We Are / Are Not */}
-      <section className="section-padding bg-slate-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-8 rounded-xl bg-card card-elevated">
-              <h3 className="text-xl font-semibold text-foreground mb-6 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-success/10 flex items-center justify-center">
-                  <CheckCircle className="w-5 h-5 text-success" />
-                </div>
-                What AXCO Is
-              </h3>
-              <ul className="space-y-3">
-                {[
-                  "Strategic market advisor",
-                  "European market researcher",
-                  "Partner identifier and validator",
-                  "Business introduction facilitator",
-                  "Trade fair and event support partner",
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-muted-foreground">
-                    <CheckCircle className="w-4 h-4 text-success flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="p-8 rounded-xl bg-card card-elevated">
-              <h3 className="text-xl font-semibold text-foreground mb-6 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-destructive/10 flex items-center justify-center">
-                  <XCircle className="w-5 h-5 text-destructive" />
-                </div>
-                What AXCO Is Not
-              </h3>
-              <ul className="space-y-3">
-                {[
-                  "Not a reseller or distributor",
-                  "Not an importer of your products",
-                  "Not a replacement for internal sales",
-                  "Not a commission-based sales agent",
-                  "Not a one-size-fits-all solution",
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-muted-foreground">
-                    <XCircle className="w-4 h-4 text-destructive flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Detail */}
+      {/* Services Detail - Alternating Layout with Images */}
       <section className="section-padding bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="space-y-12">
             {services.map((service, index) => (
               <div
                 key={service.id}
                 id={service.id}
-                className="p-6 rounded-xl bg-card card-elevated"
+                className={`flex flex-col ${
+                  index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+                } gap-8 items-center`}
               >
-                <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center mb-5">
-                  <service.icon className="w-7 h-7 text-primary-foreground" />
+                {/* Image */}
+                <div className="w-full lg:w-1/2">
+                  <div className="relative overflow-hidden rounded-2xl shadow-elegant group">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-64 md:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+                  </div>
                 </div>
-                <h2 className="text-xl font-bold text-foreground mb-3">
-                  {service.title}
-                </h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
+
+                {/* Content */}
+                <div className="w-full lg:w-1/2 space-y-4">
+                  <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center">
+                    <service.icon className="w-7 h-7 text-primary-foreground" />
+                  </div>
+                  <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                    {service.title}
+                  </h2>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
