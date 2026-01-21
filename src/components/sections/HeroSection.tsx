@@ -1,7 +1,4 @@
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-europe.jpg";
+import heroImage from "@/assets/hero-about-europe.jpg";
 import { useParallax } from "@/hooks/use-parallax";
 
 export function HeroSection() {
@@ -23,27 +20,12 @@ export function HeroSection() {
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight tracking-tight animate-fade-in-up">
-            Expand Your Technology Business into Europe with the Right Partners
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight tracking-tight animate-fade-in-up">
+            Expand Your Technology Business into Europe with AXCO Solutions
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-primary-foreground/80 leading-relaxed max-w-2xl animate-fade-in-up delay-100">
-            AXCO Solutions helps international technology manufacturers understand 
-            European markets, identify reliable local partners, and build strong 
-            foundations for sustainable growth—without building a local sales team.
+            The fastest, lowest-risk way for manufacturers to build real business in Europe
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-200">
-            <Link to="/contact">
-              <Button variant="hero" size="xl" className="w-full sm:w-auto">
-                Book a Free Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Link to="/approach">
-              <Button variant="hero-outline" size="xl" className="w-full sm:w-auto">
-                Our Approach
-              </Button>
-            </Link>
-          </div>
         </div>
       </div>
 
