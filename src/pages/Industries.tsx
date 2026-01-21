@@ -2,6 +2,8 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Wifi, Lock, TrafficCone, Building2 } from "lucide-react";
+import heroImage from "@/assets/hero-europe.jpg";
+import { useParallax } from "@/hooks/use-parallax";
 
 const industries = [
   {
@@ -67,16 +69,30 @@ const industries = [
 ];
 
 const IndustriesPage = () => {
+  const parallaxOffset = useParallax(0.3);
+
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-primary text-primary-foreground section-padding">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative min-h-[50vh] flex items-center overflow-hidden">
+        {/* Background Image with Parallax */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={heroImage}
+            alt="European business district"
+            className="w-full h-full object-cover"
+            style={{ transform: `translateY(${parallaxOffset}px) scale(1.1)` }}
+          />
+          <div className="absolute inset-0 hero-overlay" />
+        </div>
+        
+        {/* Content */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
+            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-primary-foreground animate-fade-in-up">
               Industries We Work With
             </h1>
-            <p className="mt-6 text-xl text-primary-foreground/80 leading-relaxed">
+            <p className="mt-6 text-xl text-primary-foreground/80 leading-relaxed animate-fade-in-up delay-100">
               We specialize in helping technology manufacturers in security,
               networking, and infrastructure sectors navigate European markets.
             </p>
