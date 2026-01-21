@@ -10,8 +10,8 @@ const highlights = [
   { icon: Users, label: "Extensive Partner Network" },
 ];
 
-const countries = ["Netherlands", "Austria", "UK", "Italy", "Croatia"];
-const languages = ["English", "German", "Italian", "Dutch", "French", "Russian"];
+const regions = ["DACH", "Benelux", "Nordics", "UK & Ireland", "France", "Iberia", "Italy", "Central/Eastern Europe"];
+const languages = ["English", "German", "Dutch", "French", "Spanish", "Italian", "Portuguese", "Russian"];
 
 const AboutPage = () => {
   return (
@@ -81,12 +81,15 @@ const AboutPage = () => {
                 <div className="p-5 rounded-lg bg-slate-50">
                   <div className="flex items-center gap-2 mb-3">
                     <MapPin className="w-5 h-5 text-primary" />
-                    <h3 className="font-semibold text-foreground">Countries We've Lived In</h3>
+                    <h3 className="font-semibold text-foreground">Geographic Coverage</h3>
                   </div>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    We have experience across all major European markets.
+                  </p>
                   <div className="flex flex-wrap gap-2">
-                    {countries.map((country) => (
-                      <span key={country} className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full font-medium">
-                        {country}
+                    {regions.map((region) => (
+                      <span key={region} className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full font-medium">
+                        {region}
                       </span>
                     ))}
                   </div>
@@ -95,8 +98,11 @@ const AboutPage = () => {
                 <div className="p-5 rounded-lg bg-slate-50">
                   <div className="flex items-center gap-2 mb-3">
                     <Languages className="w-5 h-5 text-primary" />
-                    <h3 className="font-semibold text-foreground">Languages We Speak</h3>
+                    <h3 className="font-semibold text-foreground">Language Capabilities</h3>
                   </div>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Our team works fluently in key European languages.
+                  </p>
                   <div className="flex flex-wrap gap-2">
                     {languages.map((lang) => (
                       <span key={lang} className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full font-medium">
