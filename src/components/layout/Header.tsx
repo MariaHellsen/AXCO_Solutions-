@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import axcoLogo from "@/assets/axco-logo.jpeg";
 
 const navigation = [
   { name: "Services", href: "/services" },
@@ -22,15 +23,12 @@ export function Header() {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="flex items-center">
-              <span className="text-2xl font-bold tracking-tight text-primary">
-                AXCO
-              </span>
-              <span className="text-2xl font-light tracking-tight text-muted-foreground ml-1">
-                Solutions
-              </span>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img 
+              src={axcoLogo} 
+              alt="AXCO Solutions" 
+              className="h-10 sm:h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
