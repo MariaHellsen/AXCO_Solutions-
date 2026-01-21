@@ -5,10 +5,11 @@ import { Menu, X } from "lucide-react";
 import axcoLogo from "@/assets/axco-logo.jpeg";
 
 const navigation = [
+  { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
+  { name: "Industries", href: "/industries" },
   { name: "Our Approach", href: "/approach" },
   { name: "Why Europe", href: "/why-europe" },
-  { name: "Industries", href: "/industries" },
   { name: "About", href: "/about" },
 ];
 
