@@ -56,25 +56,24 @@ const ServicesPage = () => {
     <Layout>
       {/* Hero */}
       <section className="relative min-h-[50vh] flex items-center overflow-hidden">
-        <div
-          className="absolute inset-0 w-full h-[120%] -top-[10%]"
-          style={{ transform: `translateY(${parallaxOffset}px)` }}
-        >
+        {/* Background Image with Parallax */}
+        <div className="absolute inset-0 z-0">
           <img
             src={heroImage}
-            alt="European business landscape"
-            className="w-full h-full object-cover"
+            alt="European business district skyline"
+            className="w-full h-full object-cover scale-110"
+            style={{ transform: `translateY(${parallaxOffset}px) scale(1.1)` }}
           />
-          <div className="absolute inset-0 bg-primary/50" />
+          <div className="absolute inset-0 hero-overlay" />
         </div>
-        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Content */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight tracking-tight animate-fade-in-up">
               Our Services
             </h1>
-            <p className="mt-6 text-xl text-white/90 leading-relaxed">
-              Structured services designed to reduce risk and accelerate your 
-              European market entry—without replacing your internal sales team.
+            <p className="mt-6 text-2xl sm:text-3xl text-primary-foreground/90 leading-relaxed max-w-3xl animate-fade-in-up delay-100">
+              Structured services designed to reduce risk and accelerate your European market entry—without replacing your internal sales team
             </p>
           </div>
         </div>
