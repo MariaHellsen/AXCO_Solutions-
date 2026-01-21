@@ -10,11 +10,11 @@ export function CTASection() {
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
             Start Your European Market Exploration
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
             Schedule a free 30-minute consultation to discuss your European 
             expansion goals and explore how we can help.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="mt-4 flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
               <Button variant="cta" size="xl">
                 Schedule a Free Consultation
@@ -22,7 +22,7 @@ export function CTASection() {
               </Button>
             </Link>
           </div>
-          <p className="mt-6 text-sm text-muted-foreground">
+          <p className="mt-3 text-sm text-muted-foreground">
             No commitment required. We'll discuss your specific situation and goals.
           </p>
         </div>
