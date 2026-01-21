@@ -1,32 +1,37 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Search, Handshake, Calendar, Users } from "lucide-react";
-import { ArrowRight } from "lucide-react";
+import { TrendingUp, Target, Briefcase, Flag, Megaphone, ArrowRight } from "lucide-react";
 
 const services = [
   {
-    icon: Search,
-    title: "European Market Research & Opportunity Assessment",
+    icon: TrendingUp,
+    title: "Market Assessment & Business Expansion",
     description:
-      "Comprehensive analysis of market potential, competitive landscape, regulatory requirements, and entry strategies tailored to your technology and target countries.",
+      "We evaluate opportunities for entering new markets or expanding existing operations, providing you with actionable insights to grow your business.",
   },
   {
-    icon: Handshake,
-    title: "Partner & Channel Identification",
+    icon: Target,
+    title: "Targeted Commercial Development",
     description:
-      "Systematic identification and profiling of potential distributors, integrators, resellers, and strategic partners across European markets.",
+      "We help you build new commercial contacts in key sectors identified by you or suggested by our team, ensuring that every opportunity aligns with your business goals.",
   },
   {
-    icon: Calendar,
-    title: "Strategic Business Introductions",
+    icon: Briefcase,
+    title: "Mission Organization & Management",
     description:
-      "Facilitation of high-quality, pre-qualified meetings with validated partners—prepared and positioned for productive business discussions.",
+      "Our team organizes and manages business missions, facilitating valuable meetings and partnerships that drive growth.",
   },
   {
-    icon: Users,
-    title: "Trade Fair & Market Visit Support",
+    icon: Flag,
+    title: "Strategic Trade Show Amplification",
     description:
-      "Expert guidance for trade fairs, business missions, and market visits to maximize your European presence and networking opportunities.",
+      "Our team helps you choose the right trade show for your goals and arrange the best way of representation, logistics, side events, potential customer visits.",
+  },
+  {
+    icon: Megaphone,
+    title: "Marketing & Communication Strategy",
+    description:
+      "We develop effective marketing and communication initiatives to strengthen your presence and impact in international markets.",
   },
 ];
 
@@ -44,7 +49,7 @@ export function WhatWeDo() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {services.map((service, index) => (
             <div
               key={service.title}
