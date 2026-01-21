@@ -5,7 +5,7 @@ export function HeroSection() {
   const parallaxOffset = useParallax(0.4);
 
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[50vh] flex items-center overflow-hidden">
       {/* Background Image with Parallax */}
       <div className="absolute inset-0 z-0">
         <img
