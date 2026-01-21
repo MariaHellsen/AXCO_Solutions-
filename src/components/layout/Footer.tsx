@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
+import axcoLogo from "@/assets/axco-logo.jpeg";
 
 const navigation = {
   services: [
@@ -28,10 +29,11 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link to="/" className="inline-block">
-              <span className="text-2xl font-bold tracking-tight">
-                AXCO
-                <span className="font-light ml-1">Solutions</span>
-              </span>
+              <img 
+                src={axcoLogo} 
+                alt="AXCO Solutions" 
+                className="h-12 w-auto brightness-0 invert"
+              />
             </Link>
             <p className="mt-4 text-primary-foreground/70 max-w-sm leading-relaxed">
               Helping international technology manufacturers understand European

@@ -57,18 +57,18 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // Extended navy palette
-        navy: {
-          50: "hsl(var(--navy-50))",
-          100: "hsl(var(--navy-100))",
-          200: "hsl(var(--navy-200))",
-          300: "hsl(var(--navy-300))",
-          400: "hsl(var(--navy-400))",
-          500: "hsl(var(--navy-500))",
-          600: "hsl(var(--navy-600))",
-          700: "hsl(var(--navy-700))",
-          800: "hsl(var(--navy-800))",
-          900: "hsl(var(--navy-900))",
+        // AXCO blue palette
+        axco: {
+          50: "hsl(var(--axco-50))",
+          100: "hsl(var(--axco-100))",
+          200: "hsl(var(--axco-200))",
+          300: "hsl(var(--axco-300))",
+          400: "hsl(var(--axco-400))",
+          500: "hsl(var(--axco-500))",
+          600: "hsl(var(--axco-600))",
+          700: "hsl(var(--axco-700))",
+          800: "hsl(var(--axco-800))",
+          900: "hsl(var(--axco-900))",
         },
         // Slate grays
         slate: {

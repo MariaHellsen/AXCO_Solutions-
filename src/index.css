@@ -11,63 +11,63 @@
 
 @layer base {
   :root {
-    /* Core brand colors - Deep navy blue palette */
+    /* Core brand colors - AXCO vibrant blue palette */
     --background: 210 25% 98%;
-    --foreground: 222 47% 11%;
+    --foreground: 210 50% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 210 50% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 210 50% 15%;
 
-    /* Primary - Deep navy blue */
-    --primary: 217 71% 25%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - AXCO Blue (from logo) */
+    --primary: 207 79% 44%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Light slate */
-    --secondary: 214 32% 91%;
-    --secondary-foreground: 222 47% 11%;
+    /* Secondary - Light blue tint */
+    --secondary: 207 45% 94%;
+    --secondary-foreground: 207 79% 35%;
 
     --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted-foreground: 210 25% 45%;
 
-    /* Accent - Warm gold for CTAs */
-    --accent: 38 92% 50%;
-    --accent-foreground: 222 47% 11%;
+    /* Accent - Deeper blue for CTAs */
+    --accent: 207 85% 38%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 217 71% 25%;
+    --border: 210 30% 90%;
+    --input: 210 30% 90%;
+    --ring: 207 79% 44%;
 
     --radius: 0.5rem;
 
-    /* Extended palette */
-    --navy-50: 214 41% 97%;
-    --navy-100: 214 38% 93%;
-    --navy-200: 214 35% 85%;
-    --navy-300: 214 32% 75%;
-    --navy-400: 217 45% 45%;
-    --navy-500: 217 60% 35%;
-    --navy-600: 217 71% 25%;
-    --navy-700: 218 72% 20%;
-    --navy-800: 219 73% 15%;
-    --navy-900: 220 75% 10%;
+    /* Extended AXCO blue palette */
+    --axco-50: 207 60% 97%;
+    --axco-100: 207 55% 93%;
+    --axco-200: 207 50% 85%;
+    --axco-300: 207 55% 70%;
+    --axco-400: 207 70% 55%;
+    --axco-500: 207 79% 44%;
+    --axco-600: 207 85% 38%;
+    --axco-700: 207 85% 32%;
+    --axco-800: 207 80% 25%;
+    --axco-900: 210 75% 18%;
 
     /* Slate grays */
     --slate-50: 210 40% 98%;
     --slate-100: 210 40% 96%;
-    --slate-200: 214 32% 91%;
-    --slate-300: 213 27% 84%;
-    --slate-400: 215 20% 65%;
-    --slate-500: 215 16% 47%;
-    --slate-600: 215 19% 35%;
-    --slate-700: 215 25% 27%;
-    --slate-800: 217 33% 17%;
-    --slate-900: 222 47% 11%;
+    --slate-200: 210 30% 91%;
+    --slate-300: 210 25% 84%;
+    --slate-400: 210 20% 65%;
+    --slate-500: 210 18% 47%;
+    --slate-600: 210 20% 35%;
+    --slate-700: 210 25% 27%;
+    --slate-800: 210 30% 17%;
+    --slate-900: 210 40% 11%;
 
     /* Success/Trust green */
     --success: 158 64% 40%;
@@ -75,27 +75,27 @@
 
     /* Sidebar */
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-foreground: 210 25% 26%;
+    --sidebar-primary: 207 79% 44%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 207 45% 96%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
     /* Custom gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(217 71% 25%) 0%, hsl(217 60% 35%) 50%, hsl(217 45% 45%) 100%);
-    --gradient-overlay: linear-gradient(180deg, hsla(217, 71%, 25%, 0.95) 0%, hsla(217, 71%, 25%, 0.85) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(214 41% 97%) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(38 92% 50%) 0%, hsl(32 95% 55%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(207 79% 44%) 0%, hsl(207 85% 38%) 50%, hsl(207 85% 32%) 100%);
+    --gradient-overlay: linear-gradient(180deg, hsla(207, 85%, 32%, 0.92) 0%, hsla(207, 79%, 44%, 0.88) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(207 60% 97%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(207 85% 38%) 0%, hsl(207 79% 44%) 100%);
 
     /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsla(222, 47%, 11%, 0.05);
-    --shadow-md: 0 4px 6px -1px hsla(222, 47%, 11%, 0.08), 0 2px 4px -2px hsla(222, 47%, 11%, 0.04);
-    --shadow-lg: 0 10px 15px -3px hsla(222, 47%, 11%, 0.08), 0 4px 6px -4px hsla(222, 47%, 11%, 0.04);
-    --shadow-xl: 0 20px 25px -5px hsla(222, 47%, 11%, 0.1), 0 8px 10px -6px hsla(222, 47%, 11%, 0.04);
-    --shadow-card: 0 0 0 1px hsla(214, 32%, 91%, 0.5), 0 4px 12px hsla(222, 47%, 11%, 0.06);
-    --shadow-card-hover: 0 0 0 1px hsla(217, 71%, 25%, 0.2), 0 12px 24px hsla(222, 47%, 11%, 0.1);
+    --shadow-sm: 0 1px 2px 0 hsla(210, 40%, 11%, 0.05);
+    --shadow-md: 0 4px 6px -1px hsla(210, 40%, 11%, 0.08), 0 2px 4px -2px hsla(210, 40%, 11%, 0.04);
+    --shadow-lg: 0 10px 15px -3px hsla(210, 40%, 11%, 0.08), 0 4px 6px -4px hsla(210, 40%, 11%, 0.04);
+    --shadow-xl: 0 20px 25px -5px hsla(210, 40%, 11%, 0.1), 0 8px 10px -6px hsla(210, 40%, 11%, 0.04);
+    --shadow-card: 0 0 0 1px hsla(210, 30%, 91%, 0.5), 0 4px 12px hsla(210, 40%, 11%, 0.06);
+    --shadow-card-hover: 0 0 0 1px hsla(207, 79%, 44%, 0.25), 0 12px 24px hsla(210, 40%, 11%, 0.1);
   }
 
   .dark {
