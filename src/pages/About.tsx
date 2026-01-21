@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Globe, Users, Languages, Award } from "lucide-react";
 import heroAboutImage from "@/assets/hero-about-europe.jpg";
+import { useParallax } from "@/hooks/use-parallax";
 
 const stats = [
   {
@@ -55,16 +56,19 @@ const values = [
 ];
 
 const AboutPage = () => {
+  const parallaxOffset = useParallax(0.3);
+
   return (
     <Layout>
       {/* Hero */}
       <section className="relative min-h-[50vh] flex items-center overflow-hidden">
-        {/* Background Image */}
+        {/* Background Image with Parallax */}
         <div className="absolute inset-0 z-0">
           <img
             src={heroAboutImage}
             alt="Beautiful European cities skyline"
             className="w-full h-full object-cover"
+            style={{ transform: `translateY(${parallaxOffset}px) scale(1.1)` }}
           />
           <div className="absolute inset-0 hero-overlay" />
         </div>

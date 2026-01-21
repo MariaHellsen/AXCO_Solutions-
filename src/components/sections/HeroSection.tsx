@@ -2,16 +2,20 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-europe.jpg";
+import { useParallax } from "@/hooks/use-parallax";
 
 export function HeroSection() {
+  const parallaxOffset = useParallax(0.4);
+
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image with Parallax */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
           alt="European business district skyline"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover scale-110"
+          style={{ transform: `translateY(${parallaxOffset}px) scale(1.1)` }}
         />
         <div className="absolute inset-0 hero-overlay" />
       </div>
