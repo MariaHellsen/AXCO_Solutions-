@@ -20,13 +20,13 @@ export function Footer() {
   return (
     <footer className="bg-background border-t border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_auto_auto_auto] gap-8 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-8">
           {/* Brand Column */}
-          <div className="pr-8">
+          <div className="lg:col-span-2">
             <Link to="/" className="inline-block">
               <img src={axcoLogo} alt="AXCO Solutions" className="h-12 w-auto" />
             </Link>
-            <p className="mt-4 text-muted-foreground text-sm leading-relaxed pr-8">
+            <p className="mt-4 text-muted-foreground text-sm leading-relaxed">
               Helping international technology manufacturers understand European markets and build foundations for
               sustainable growth.
             </p>
