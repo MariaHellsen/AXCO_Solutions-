@@ -140,9 +140,6 @@ const ApproachPage = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
-          <p className="mt-3 text-sm text-primary-foreground/70">
-            No commitment required. We'll discuss your specific situation and goals.
-          </p>
         </div>
       </section>
     </Layout>
