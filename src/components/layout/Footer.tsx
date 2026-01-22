@@ -19,28 +19,22 @@ const navigation = {
 export function Footer() {
   return (
     <footer className="bg-background border-t border-border">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-4">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link to="/" className="inline-block">
-              <img 
-                src={axcoLogo} 
-                alt="AXCO Solutions" 
-                className="h-12 w-auto"
-              />
+              <img src={axcoLogo} alt="AXCO Solutions" className="h-12 w-auto" />
             </Link>
             <p className="mt-4 text-muted-foreground text-sm leading-relaxed">
-              Helping international technology manufacturers understand European
-              markets and build foundations for sustainable growth.
+              Helping international technology manufacturers understand European markets and build foundations for
+              sustainable growth.
             </p>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground mb-4">
-              Services
-            </h3>
+            <h3 className="text-sm font-semibold text-foreground mb-4">Services</h3>
             <ul className="space-y-3">
               {navigation.services.map((item) => (
                 <li key={item.name}>
@@ -57,9 +51,7 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground mb-4">
-              Company
-            </h3>
+            <h3 className="text-sm font-semibold text-foreground mb-4">Company</h3>
             <ul className="space-y-3">
               {navigation.company.map((item) => (
                 <li key={item.name}>
@@ -76,9 +68,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground mb-4">
-              Contact
-            </h3>
+            <h3 className="text-sm font-semibold text-foreground mb-4">Contact</h3>
             <ul className="space-y-3">
               <li>
                 <a
@@ -92,7 +82,11 @@ export function Footer() {
               <li>
                 <div className="flex items-start gap-2 text-sm text-muted-foreground">
                   <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5" />
-                  <span>Kršanci 95, Liganj<br />51415 - Lovran - Croatia</span>
+                  <span>
+                    Kršanci 95, Liganj
+                    <br />
+                    51415 - Lovran - Croatia
+                  </span>
                 </div>
               </li>
             </ul>
@@ -103,16 +97,10 @@ export function Footer() {
         <div className="mt-8 pt-4 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-6 text-sm">
-              <Link
-                to="/privacy"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
+              <Link to="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">
                 Privacy Policy
               </Link>
-              <Link
-                to="/terms"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
+              <Link to="/terms" className="text-muted-foreground hover:text-foreground transition-colors">
                 Terms of Service
               </Link>
             </div>
