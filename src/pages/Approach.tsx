@@ -6,6 +6,16 @@ import { ArrowRight } from "lucide-react";
 const ApproachPage = () => {
   return (
     <Layout>
+      {/* Hero Section */}
+      <section className="bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="flex items-center gap-4 mb-4">
+            <div className="w-12 h-1 bg-primary rounded-full" />
+            <span className="text-sm font-medium text-primary uppercase tracking-wider">Example Service Packages</span>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="section-padding bg-primary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
