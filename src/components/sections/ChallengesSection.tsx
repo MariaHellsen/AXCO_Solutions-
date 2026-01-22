@@ -19,7 +19,7 @@ const challenges = [
 
 export function ChallengesSection() {
   return (
-    <section className="section-padding bg-gradient-to-b from-background to-secondary/30">
+    <section className="section-padding bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-10">
         {/* Intro */}
         <div className="max-w-3xl mx-auto text-center mb-5">
