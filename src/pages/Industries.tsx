@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Wifi, Lock, TrafficCone, Building2 } from "lucide-react";
 import heroImage from "@/assets/hero-europe.jpg";
 import { useParallax } from "@/hooks/use-parallax";
+import { WhoWeSupport } from "@/components/sections/WhoWeSupport";
 
 const industries = [
   {
@@ -99,6 +100,9 @@ const IndustriesPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Who We Support */}
+      <WhoWeSupport />
 
       {/* Industries */}
       <section className="section-padding bg-background">
