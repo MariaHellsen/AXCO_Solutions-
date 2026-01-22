@@ -149,7 +149,7 @@ const IndustriesPage = () => {
                         <h3 className="text-xl font-bold text-foreground mb-2">
                           {industry.title}
                         </h3>
-                        <p className="text-muted-foreground leading-relaxed text-sm">
+                        <p className="text-muted-foreground leading-relaxed text-base">
                           {industry.description}
                         </p>
                       </div>
@@ -158,21 +158,21 @@ const IndustriesPage = () => {
                     {/* Data Stats */}
                     <div className="grid grid-cols-3 gap-4 mt-6 pt-6 border-t border-border/50">
                       <div>
-                        <div className="flex items-center gap-1.5 text-muted-foreground text-xs mb-1">
+                        <div className="flex items-center gap-1.5 text-muted-foreground text-sm mb-1">
                           <Globe className="w-3.5 h-3.5" />
                           <span>EU Market</span>
                         </div>
                         <span className="text-lg font-bold text-foreground">{industry.marketSize}</span>
                       </div>
                       <div>
-                        <div className="flex items-center gap-1.5 text-muted-foreground text-xs mb-1">
+                        <div className="flex items-center gap-1.5 text-muted-foreground text-sm mb-1">
                           <TrendingUp className="w-3.5 h-3.5" />
                           <span>CAGR</span>
                         </div>
                         <span className="text-lg font-bold text-green-600">{industry.growthRate}</span>
                       </div>
                       <div>
-                        <div className="flex items-center gap-1.5 text-muted-foreground text-xs mb-1">
+                        <div className="flex items-center gap-1.5 text-muted-foreground text-sm mb-1">
                           <AlertTriangle className="w-3.5 h-3.5" />
                           <span>Entry Complexity</span>
                         </div>
@@ -183,7 +183,7 @@ const IndustriesPage = () => {
                               style={{ width: `${industry.complexity}%` }}
                             />
                           </div>
-                          <span className="text-xs font-semibold text-foreground">{industry.complexity}%</span>
+                          <span className="text-sm font-semibold text-foreground">{industry.complexity}%</span>
                         </div>
                       </div>
                     </div>
@@ -204,7 +204,7 @@ const IndustriesPage = () => {
                         <span className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 text-xs font-bold text-primary">
                           {i + 1}
                         </span>
-                        <span className="text-xs text-muted-foreground leading-tight">{challenge}</span>
+                        <span className="text-sm text-muted-foreground leading-tight">{challenge}</span>
                       </div>
                     ))}
                   </div>
@@ -221,7 +221,7 @@ const IndustriesPage = () => {
                 <h3 className="text-xl font-bold text-foreground mb-3">
                   Other Technology Sectors
                 </h3>
-                <p className="text-muted-foreground leading-relaxed text-sm mb-6">
+                <p className="text-muted-foreground leading-relaxed text-base mb-6">
                   While we specialize in the industries above, we also work with
                   technology manufacturers in adjacent sectors. If your product
                   addresses European enterprise or infrastructure markets, we'd
