@@ -13,7 +13,6 @@ const navigation = {
     { name: "About AXCO", href: "/about" },
     { name: "Our Approach", href: "/approach" },
     { name: "Industries", href: "/industries" },
-    { name: "Contact", href: "/contact" },
   ],
 };
 
