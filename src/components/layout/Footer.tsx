@@ -58,7 +58,7 @@ export function Footer() {
           {/* Company */}
           <div>
             <h3 className="text-sm font-semibold text-foreground mb-4">
-              Resources
+              Company
             </h3>
             <ul className="space-y-3">
               {navigation.company.map((item) => (
