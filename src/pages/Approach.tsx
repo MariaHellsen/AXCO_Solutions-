@@ -171,20 +171,23 @@ const ApproachPage = () => {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-primary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-4">
-            Ready to Start?
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary-foreground tracking-tight mb-2">
+            Start Your European Market Exploration
           </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Let's discuss your European expansion goals in a free consultation.
+          <p className="text-lg text-primary-foreground/80 mb-4 max-w-2xl mx-auto">
+            Schedule a free 30-minute consultation to discuss your European expansion goals and explore how we can help.
           </p>
           <Link to="/contact">
-            <Button variant="cta" size="xl">
+            <Button variant="secondary" size="xl">
               Schedule a Free Consultation
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
+          <p className="mt-3 text-sm text-primary-foreground/70">
+            No commitment required. We'll discuss your specific situation and goals.
+          </p>
         </div>
       </section>
     </Layout>
