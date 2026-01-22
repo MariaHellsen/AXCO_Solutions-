@@ -26,7 +26,7 @@ const AboutPage = () => {
                 <div className="w-12 h-1 bg-primary rounded-full" />
                 <span className="text-sm font-medium text-primary uppercase tracking-wider">About Us</span>
               </div>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight tracking-tight mb-6">
+              <h1 className="text-3xl font-bold text-foreground leading-tight tracking-tight mb-6">
                 Unlock Your Business Potential with Our Expertise in European Markets
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
