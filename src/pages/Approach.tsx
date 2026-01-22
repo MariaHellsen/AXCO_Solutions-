@@ -132,7 +132,8 @@ const ApproachPage = () => {
             Get in Touch
           </h2>
           <p className="text-lg text-primary-foreground/80 mb-4 max-w-2xl mx-auto">
-            Let AXCO Solutions help your business thrive in international markets. Contact us today to learn more about how our strategic consultancy can drive your success in Europe.
+            Let AXCO Solutions help your business thrive in international markets.<br />
+            Contact us today to learn more about how our strategic consultancy can drive your success in Europe.
           </p>
           <Link to="/contact">
             <Button variant="secondary" size="xl">
