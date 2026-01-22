@@ -1,13 +1,13 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Globe, Users, Languages, Award, MapPin } from "lucide-react";
+import { ArrowRight, Globe, Users, Languages, Network, MapPin } from "lucide-react";
 
 const highlights = [
-  { icon: Award, label: "20+ Years Experience" },
-  { icon: Globe, label: "5 Countries Lived In" },
-  { icon: Languages, label: "6 Languages Spoken" },
-  { icon: Users, label: "Extensive Partner Network" },
+  { icon: Globe, label: "20+ Years Experience" },
+  { icon: Users, label: "25+ Countries" },
+  { icon: Languages, label: "8+ Languages" },
+  { icon: Network, label: "500+ Partners Network" },
 ];
 
 const regions = ["DACH", "Benelux", "Nordics", "UK & Ireland", "France", "Iberia", "Italy", "Central/Eastern Europe"];
