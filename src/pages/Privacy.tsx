@@ -2,7 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 
 const PrivacyPage = () => {
   return (
-    <Layout>
+    <Layout hideFooter>
       {/* Hero */}
       <section className="bg-primary text-primary-foreground section-padding">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
