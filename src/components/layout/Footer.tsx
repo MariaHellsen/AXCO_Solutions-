@@ -91,18 +91,9 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href="tel:+31201234567"
-                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  <Phone className="h-4 w-4 flex-shrink-0" />
-                  <span>+31 20 123 4567</span>
-                </a>
-              </li>
-              <li>
                 <div className="flex items-start gap-2 text-sm text-muted-foreground">
                   <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5" />
-                  <span>Amsterdam,<br />Netherlands</span>
+                  <span>Kršanci 95, Liganj<br />51415 - Lovran - Croatia</span>
                 </div>
               </li>
             </ul>
