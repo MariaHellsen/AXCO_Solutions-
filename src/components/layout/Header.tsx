@@ -7,8 +7,8 @@ import axcoLogo from "@/assets/axco-logo.jpeg";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
-  { name: "Industries", href: "/industries" },
   { name: "Service Packages", href: "/approach" },
+  { name: "Industries", href: "/industries" },
   { name: "About", href: "/about" },
 ];
 
