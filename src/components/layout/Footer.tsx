@@ -26,7 +26,7 @@ export function Footer() {
             <Link to="/" className="inline-block">
               <img src={axcoLogo} alt="AXCO Solutions" className="h-12 w-auto" />
             </Link>
-            <p className="mt-4 text-muted-foreground text-sm leading-relaxed pl-8">
+            <p className="mt-4 text-muted-foreground text-sm leading-relaxed pr-8">
               Helping international technology manufacturers understand European markets and build foundations for
               sustainable growth.
             </p>
