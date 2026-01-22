@@ -9,7 +9,6 @@ const navigation = [
   { name: "Services", href: "/services" },
   { name: "Industries", href: "/industries" },
   { name: "Our Approach", href: "/approach" },
-  { name: "Why Europe", href: "/why-europe" },
   { name: "About", href: "/about" },
 ];
 
