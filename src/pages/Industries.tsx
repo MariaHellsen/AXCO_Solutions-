@@ -248,7 +248,7 @@ const IndustriesPage = () => {
               <h3 className="text-xl md:text-2xl font-bold text-foreground leading-snug">
                 Navigate Complexity With Confidence
               </h3>
-              <p className="text-muted-foreground mt-2">
+              <p className="text-lg text-muted-foreground mt-2">
                 Our deep industry experience means we understand these challenges—and how to address them strategically.
               </p>
             </div>
