@@ -29,9 +29,13 @@ const AboutPage = () => {
               <h1 className="text-3xl font-bold text-foreground leading-tight tracking-tight mb-6">
                 Unlock Your Business Potential with Our Expertise in European Markets
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 We are a passionate team of technology enthusiasts with over 20 years of experience 
                 driving business growth across Europe in the IT and Physical Security sectors.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Our expertise blends cutting-edge sales, marketing, and strategic know-how with a deep 
+                technical understanding of the industry.
               </p>
               
               {/* Highlights */}
