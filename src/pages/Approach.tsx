@@ -64,7 +64,7 @@ const ApproachPage = () => {
       </section>
 
       {/* Service Packages Grid */}
-      <section className="pt-4 pb-12 bg-slate-50">
+      <section className="pb-12 bg-slate-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {servicePackages.map((pkg, index) => (
