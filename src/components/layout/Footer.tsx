@@ -20,7 +20,7 @@ export function Footer() {
   return (
     <footer className="bg-background border-t border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-8 lg:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_auto_auto_auto] gap-8 lg:gap-12">
           {/* Brand Column */}
           <div className="pr-8">
             <Link to="/" className="inline-block">
