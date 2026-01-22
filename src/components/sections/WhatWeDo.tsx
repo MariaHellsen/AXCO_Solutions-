@@ -37,13 +37,13 @@ const services = [
 
 export function WhatWeDo() {
   return (
-    <section id="what-we-do" className="section-padding bg-axco-900 scroll-mt-20">
+    <section id="what-we-do" className="section-padding bg-axco-900/10 scroll-mt-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-6">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
             What We Do
           </h2>
-          <p className="mt-2 text-lg text-white/80">
+          <p className="mt-2 text-lg text-muted-foreground">
             Structured services designed to reduce risk and accelerate your 
             European market entry.
           </p>
