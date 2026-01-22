@@ -16,7 +16,6 @@ const servicePackages = [
       "Roadshow planning & execution",
       "Post-mission follow-up support",
     ],
-    highlighted: false,
   },
   {
     icon: Presentation,
@@ -30,8 +29,6 @@ const servicePackages = [
       "Side visits to key partners",
       "Post-show lead conversion",
     ],
-    highlighted: true,
-    badge: "Most Popular",
   },
   {
     icon: Users,
@@ -44,7 +41,6 @@ const servicePackages = [
       "Pricing & channel strategy guidance",
       "Ongoing partner management support",
     ],
-    highlighted: false,
   },
 ];
 
@@ -74,28 +70,13 @@ const ApproachPage = () => {
             {servicePackages.map((pkg, index) => (
               <div
                 key={pkg.title}
-                className={`relative flex flex-col bg-card rounded-2xl border-2 transition-all duration-300 animate-fade-in-up ${
-                  pkg.highlighted
-                    ? "border-primary shadow-lg scale-[1.02]"
-                    : "border-border/50 hover:border-primary/30 hover:shadow-md"
-                }`}
+                className="relative flex flex-col bg-card rounded-2xl border-2 border-border/50 hover:border-primary hover:shadow-lg transition-all duration-300 animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                {/* Badge */}
-                {pkg.badge && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="px-4 py-1 bg-primary text-primary-foreground text-sm font-semibold rounded-full">
-                      {pkg.badge}
-                    </span>
-                  </div>
-                )}
-
                 <div className="p-6 flex-1 flex flex-col">
                   {/* Icon */}
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
-                    pkg.highlighted ? "bg-primary" : "bg-primary/10"
-                  }`}>
-                    <pkg.icon className={`w-6 h-6 ${pkg.highlighted ? "text-primary-foreground" : "text-primary"}`} />
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-primary/10">
+                    <pkg.icon className="w-6 h-6 text-primary" />
                   </div>
 
                   {/* Title & Duration */}
@@ -121,7 +102,7 @@ const ApproachPage = () => {
                   <div className="mt-6 pt-6 border-t border-border/50">
                     <Link to="/contact" className="w-full">
                       <Button
-                        variant={pkg.highlighted ? "default" : "outline"}
+                        variant="outline"
                         className="w-full"
                       >
                         Learn More
