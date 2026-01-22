@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
-import { Mail, Phone, MapPin, Clock, CheckCircle } from "lucide-react";
+import { Clock, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactPage = () => {
@@ -142,73 +142,13 @@ const ContactPage = () => {
               </form>
             </div>
 
-            {/* Contact Info */}
+            {/* What to Expect */}
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-6">
-                Contact Information
+                What to Expect
               </h2>
 
-              <div className="space-y-6 mb-12">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-foreground">Email</h3>
-                    <a
-                      href="mailto:info@axcosolutions.com"
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      info@axcosolutions.com
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-foreground">Phone</h3>
-                    <a
-                      href="tel:+31201234567"
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      +31 20 123 4567
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-foreground">Location</h3>
-                    <p className="text-muted-foreground">
-                      Amsterdam, Netherlands
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-foreground">Response Time</h3>
-                    <p className="text-muted-foreground">
-                      Within 24 hours on business days
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* What to Expect */}
               <div className="p-6 rounded-xl bg-slate-50">
-                <h3 className="text-lg font-semibold text-foreground mb-4">
-                  What to Expect
-                </h3>
                 <ul className="space-y-3">
                   {[
                     "Free 30-minute video or phone consultation",
@@ -223,6 +163,18 @@ const ContactPage = () => {
                     </li>
                   ))}
                 </ul>
+
+                <div className="mt-6 pt-6 border-t border-border flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-foreground">Response Time</h3>
+                    <p className="text-muted-foreground">
+                      Within 24 hours on business days
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
