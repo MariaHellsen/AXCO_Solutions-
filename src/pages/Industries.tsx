@@ -132,16 +132,15 @@ const IndustriesPage = () => {
             </p>
           </div>
 
-          <div className="space-y-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {industries.map((industry, index) => (
               <div
                 key={industry.title}
-                className="group bg-card rounded-2xl border border-border/50 overflow-hidden hover:shadow-lg transition-all duration-300 animate-fade-in-up"
+                className="group bg-card rounded-2xl border border-border/50 overflow-hidden hover:shadow-lg transition-all duration-300 animate-fade-in-up flex flex-col"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
-                  {/* Left: Industry Info */}
-                  <div className="lg:col-span-5 p-6 lg:p-8 flex flex-col justify-center">
+                {/* Industry Info */}
+                <div className="p-6 flex flex-col justify-center flex-1">
                     <div className="flex items-start gap-4">
                       <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
                         <industry.icon className="w-7 h-7 text-primary-foreground" />
@@ -190,25 +189,24 @@ const IndustriesPage = () => {
                     </div>
                   </div>
 
-                  {/* Right: Challenges */}
-                  <div className="lg:col-span-7 bg-axco-900/5 p-6 lg:p-8">
-                    <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-4 flex items-center gap-2">
-                      <AlertTriangle className="w-4 h-4 text-amber-500" />
-                      Market Entry Challenges
-                    </h4>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      {industry.challenges.map((challenge, i) => (
-                        <div 
-                          key={challenge} 
-                          className="flex items-start gap-3 bg-background/60 backdrop-blur-sm rounded-lg p-3 border border-border/30"
-                        >
-                          <span className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 text-xs font-bold text-primary">
-                            {String(i + 1).padStart(2, '0')}
-                          </span>
-                          <span className="text-sm text-muted-foreground leading-tight">{challenge}</span>
-                        </div>
-                      ))}
-                    </div>
+                {/* Challenges */}
+                <div className="bg-axco-900/5 p-6 mt-auto">
+                  <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-3 flex items-center gap-2">
+                    <AlertTriangle className="w-4 h-4 text-amber-500" />
+                    Market Entry Challenges
+                  </h4>
+                  <div className="grid grid-cols-2 gap-2">
+                    {industry.challenges.map((challenge, i) => (
+                      <div 
+                        key={challenge} 
+                        className="flex items-start gap-2 bg-background/60 backdrop-blur-sm rounded-lg p-2.5 border border-border/30"
+                      >
+                        <span className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 text-xs font-bold text-primary">
+                          {i + 1}
+                        </span>
+                        <span className="text-xs text-muted-foreground leading-tight">{challenge}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
