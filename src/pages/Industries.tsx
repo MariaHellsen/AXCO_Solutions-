@@ -240,23 +240,23 @@ const IndustriesPage = () => {
       </section>
 
       {/* AXCO Solution Bridge - Minimal Quote Style */}
-      <section className="py-16 bg-gradient-to-b from-background to-slate-50">
+      <section className="py-10 bg-gradient-to-b from-background to-slate-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <div className="relative pl-8 border-l-4 border-primary">
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground leading-snug mb-4">
+          <div className="flex items-center gap-8 pl-8 border-l-4 border-primary max-w-5xl">
+            <div className="flex-1">
+              <h3 className="text-xl md:text-2xl font-bold text-foreground leading-snug">
                 Navigate Complexity With Confidence
               </h3>
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-muted-foreground mt-1">
                 Our deep industry experience means we understand these challenges—and how to address them strategically.
               </p>
-              <Link to="/approach">
-                <Button variant="outline" className="hover:bg-primary hover:text-primary-foreground transition-colors">
-                  Our Approach
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
             </div>
+            <Link to="/approach" className="flex-shrink-0">
+              <Button variant="outline" className="hover:bg-primary hover:text-primary-foreground transition-colors">
+                Our Approach
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
