@@ -239,30 +239,23 @@ const IndustriesPage = () => {
         </div>
       </section>
 
-      {/* AXCO Solution Bridge */}
-      <section className="py-10 bg-gradient-to-b from-background via-axco-900/5 to-slate-50">
+      {/* AXCO Solution Bridge - Minimal Quote Style */}
+      <section className="py-16 bg-gradient-to-b from-background to-slate-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-card rounded-2xl border border-primary/20 p-8 shadow-lg">
-              <div className="flex flex-col md:flex-row items-center gap-6">
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <CheckCircle2 className="w-8 h-8 text-primary" />
-                </div>
-                <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-xl font-bold text-foreground mb-2">
-                    Navigate Complexity With Confidence
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Our deep industry experience means we understand these challenges—and how to address them strategically.
-                  </p>
-                </div>
-                <Link to="/approach">
-                  <Button variant="outline" className="flex-shrink-0">
-                    Our Approach
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </div>
+          <div className="max-w-3xl mx-auto">
+            <div className="relative pl-8 border-l-4 border-primary">
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground leading-snug mb-4">
+                Navigate Complexity With Confidence
+              </h3>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                Our deep industry experience means we understand these challenges—and how to address them strategically.
+              </p>
+              <Link to="/approach">
+                <Button variant="outline" className="hover:bg-primary hover:text-primary-foreground transition-colors">
+                  Our Approach
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
