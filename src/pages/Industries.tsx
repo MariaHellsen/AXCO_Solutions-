@@ -211,6 +211,30 @@ const IndustriesPage = () => {
                 </div>
               </div>
             ))}
+
+            {/* Other Technology Sectors Card */}
+            <div className="group bg-card rounded-2xl border-2 border-dashed border-primary/30 overflow-hidden hover:border-primary/50 hover:shadow-lg transition-all duration-300 animate-fade-in-up flex flex-col">
+              <div className="p-6 flex flex-col justify-center items-center text-center flex-1">
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                  <Globe className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">
+                  Other Technology Sectors
+                </h3>
+                <p className="text-muted-foreground leading-relaxed text-sm mb-6">
+                  While we specialize in the industries above, we also work with
+                  technology manufacturers in adjacent sectors. If your product
+                  addresses European enterprise or infrastructure markets, we'd
+                  be happy to discuss how we might help.
+                </p>
+                <Link to="/contact">
+                  <Button variant="outline" className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                    Discuss Your Industry
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -244,28 +268,6 @@ const IndustriesPage = () => {
         </div>
       </section>
 
-      {/* Other Industries */}
-      <section className="section-padding bg-slate-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              Other Technology Sectors
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              While we specialize in the industries above, we also work with
-              technology manufacturers in adjacent sectors. If your product
-              addresses European enterprise or infrastructure markets, we'd
-              be happy to discuss how we might help.
-            </p>
-            <Link to="/contact">
-              <Button variant="outline" size="lg">
-                Discuss Your Industry
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="section-padding bg-primary">
