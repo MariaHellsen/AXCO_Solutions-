@@ -148,37 +148,21 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* CTA - Elevated Card Design */}
-      <section className="py-16 bg-slate-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="relative bg-card rounded-2xl p-10 sm:p-14 shadow-elegant overflow-hidden">
-              {/* Decorative elements */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-              <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary/5 rounded-full translate-y-1/2 -translate-x-1/2" />
-              
-              <div className="relative text-center">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6">
-                  <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                  <span className="text-sm font-medium text-primary">Let's Work Together</span>
-                </div>
-                
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                  We Are Here to Drive Your Success
-                </h2>
-                <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-                  Pioneering growth and ensuring your business thrives in the dynamic, fast-paced European market. 
-                  Let us help you navigate the opportunities of tomorrow, today.
-                </p>
-                <Link to="/contact">
-                  <Button variant="cta" size="xl">
-                    Start the Conversation
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
+      {/* CTA */}
+      <section className="section-padding bg-slate-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-foreground mb-4">
+            Ready to Start?
+          </h2>
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Let's discuss your European expansion goals in a free consultation.
+          </p>
+          <Link to="/contact">
+            <Button variant="cta" size="xl">
+              Schedule a Free Consultation
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </section>
     </Layout>
