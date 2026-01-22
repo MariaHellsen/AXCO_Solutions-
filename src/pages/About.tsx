@@ -152,10 +152,11 @@ const AboutPage = () => {
       <section className="section-padding bg-slate-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-foreground mb-4">
-            Ready to Start?
+            We Are Here to Drive Your Success
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Let's discuss your European expansion goals in a free consultation.
+            Pioneering growth and ensuring your business thrives in the dynamic, fast-paced European market. 
+            Let us help you navigate the opportunities of tomorrow, today.
           </p>
           <Link to="/contact">
             <Button variant="cta" size="xl">
