@@ -240,7 +240,7 @@ const IndustriesPage = () => {
       </section>
 
       {/* AXCO Solution Bridge - Minimal Quote Style */}
-      <section className="py-10 bg-gradient-to-b from-background to-slate-50">
+      <section className="py-12 bg-slate-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-8 pl-8 border-l-4 border-primary max-w-5xl">
             <div className="flex-1">
