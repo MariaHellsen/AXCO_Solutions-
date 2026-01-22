@@ -1,18 +1,17 @@
-import { Search, Users, Calendar, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const challenges = [
   {
-    icon: Search,
+    number: "01",
     question: "Spending months searching, but unable to identify and connect with the right distributors or integrators in Europe?",
   },
   {
-    icon: Users,
+    number: "02",
     question: "Attending trade shows with poor results, failing to secure meetings with real decision-makers?",
   },
   {
-    icon: Calendar,
+    number: "03",
     question: "Planning expensive business trips that lack structure, with few high-quality appointments?",
   },
 ];
@@ -22,36 +21,37 @@ export function ChallengesSection() {
     <section className="section-padding bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-10">
         {/* Intro */}
-        <div className="max-w-3xl mx-auto text-center mb-5">
+        <div className="max-w-3xl mx-auto text-center mb-8">
           <p className="text-lg text-muted-foreground leading-relaxed">
             Entering the European market is a critical step for global growth, yet its complexity—unfamiliar business cultures, fragmented channels, and high entry barriers—often stops even the most ambitious manufacturers before they begin.
           </p>
         </div>
 
         {/* Challenges Header */}
-        <div className="text-center mb-4">
+        <div className="text-center mb-8">
           <h2 className="text-2xl sm:text-3xl font-semibold text-foreground">
             Do these challenges sound familiar?
           </h2>
         </div>
 
-        {/* Challenge Cards */}
-        <div className="grid gap-3 md:grid-cols-3 max-w-5xl mx-auto mb-6">
-          {challenges.map((challenge, index) => (
-            <div
-              key={index}
-              className="group relative bg-card rounded-xl p-6 border border-border/50 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/20"
-            >
-              <div className="flex flex-col items-center text-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/15 transition-colors">
-                  <challenge.icon className="w-7 h-7 text-primary" />
-                </div>
-                <p className="text-foreground/80 leading-relaxed">
+        {/* Numbered Challenges List */}
+        <div className="max-w-4xl mx-auto mb-10">
+          <div className="space-y-6">
+            {challenges.map((challenge, index) => (
+              <div
+                key={index}
+                className="flex items-start gap-6 animate-fade-in-up"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <span className="text-5xl sm:text-6xl font-bold text-primary/20 leading-none select-none">
+                  {challenge.number}
+                </span>
+                <p className="text-foreground/80 text-lg leading-relaxed pt-2">
                   {challenge.question}
                 </p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Solution Statement */}

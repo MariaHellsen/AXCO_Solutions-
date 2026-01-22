@@ -31,7 +31,7 @@ export function WhyAXCO() {
   return (
     <section className="section-padding bg-axco-900/5">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
             Why AXCO Solutions
           </h2>
@@ -40,25 +40,37 @@ export function WhyAXCO() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-          {reasons.map((reason, index) => (
-            <div
-              key={reason.label}
-              className="group text-center p-5 rounded-xl bg-card card-elevated animate-fade-in-up"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/20 transition-colors">
-                <reason.icon className="w-6 h-6 text-primary" />
+        {/* Horizontal Stats Strip */}
+        <div className="bg-card rounded-2xl shadow-sm border border-border/50 p-6 sm:p-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
+            {reasons.map((reason, index) => (
+              <div
+                key={reason.label}
+                className="relative text-center lg:text-left animate-fade-in-up"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                {/* Divider for desktop (except first item) */}
+                {index > 0 && (
+                  <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-px h-16 bg-border" />
+                )}
+                
+                <div className="lg:pl-6">
+                  <div className="flex items-center justify-center lg:justify-start gap-3 mb-2">
+                    <reason.icon className="w-5 h-5 text-primary" />
+                    <span className="text-3xl sm:text-4xl font-bold text-foreground">
+                      {reason.stat}
+                    </span>
+                  </div>
+                  <div className="text-sm font-medium text-primary uppercase tracking-wider mb-1">
+                    {reason.label}
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed hidden sm:block">
+                    {reason.description}
+                  </p>
+                </div>
               </div>
-              <div className="text-3xl font-bold text-foreground mb-1">{reason.stat}</div>
-              <div className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-2">
-                {reason.label}
-              </div>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {reason.description}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

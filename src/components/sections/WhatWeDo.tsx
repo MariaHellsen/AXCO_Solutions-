@@ -39,7 +39,7 @@ export function WhatWeDo() {
   return (
     <section id="what-we-do" className="section-padding bg-background scroll-mt-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
             What We Do
           </h2>
@@ -49,16 +49,16 @@ export function WhatWeDo() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="group p-6 rounded-xl bg-card card-elevated animate-fade-in-up"
+              className="group p-6 rounded-xl bg-card border-l-4 border-l-primary shadow-sm hover:shadow-md transition-shadow animate-fade-in-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
-                  <service.icon className="w-5 h-5 text-primary-foreground" />
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                  <service.icon className="w-5 h-5 text-primary" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">
@@ -73,7 +73,7 @@ export function WhatWeDo() {
           ))}
         </div>
 
-        <div className="mt-5 text-center">
+        <div className="mt-8 text-center">
           <Link to="/services">
             <Button variant="outline" size="lg">
               Explore All Services
