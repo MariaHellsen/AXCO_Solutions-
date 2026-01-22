@@ -4,13 +4,13 @@ const PrivacyPage = () => {
   return (
     <Layout hideFooter>
       {/* Hero */}
-      <section className="bg-primary text-primary-foreground section-padding">
+      <section className="section-padding bg-background border-b border-border">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
+            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground">
               Privacy Policy
             </h1>
-            <p className="mt-4 text-primary-foreground/80">
+            <p className="mt-2 text-muted-foreground">
               Last updated: 1/22/2026
             </p>
           </div>
@@ -21,7 +21,7 @@ const PrivacyPage = () => {
       <section className="section-padding bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl prose prose-slate">
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed mt-0">
               AXCO Solutions ("we", "our", "us") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, and protect personal information when you visit our website or contact us.
             </p>
 
