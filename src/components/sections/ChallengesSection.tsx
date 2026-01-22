@@ -67,10 +67,10 @@ export function ChallengesSection() {
             </p>
             <div className="mt-6">
               <Button asChild variant="default" size="lg">
-                <Link to="/services" className="inline-flex items-center gap-2">
+                <a href="#what-we-do" className="inline-flex items-center gap-2">
                   Explore Our Services
                   <ArrowRight className="w-4 h-4" />
-                </Link>
+                </a>
               </Button>
             </div>
           </div>
