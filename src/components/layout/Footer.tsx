@@ -11,7 +11,7 @@ const navigation = {
   ],
   company: [
     { name: "About AXCO", href: "/about" },
-    { name: "Our Approach", href: "/approach" },
+    { name: "Service Packages", href: "/approach" },
     { name: "Industries", href: "/industries" },
   ],
 };
