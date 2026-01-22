@@ -1,37 +1,43 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { TrendingUp, Target, Briefcase, Flag, Megaphone, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+
+import europeMapImg from "@/assets/service-europe-map.jpg";
+import euSymbolImg from "@/assets/service-eu-symbol.jpg";
+import frankfurtImg from "@/assets/service-frankfurt.jpg";
+import euFlagsImg from "@/assets/service-eu-flags.jpg";
+import trainBridgeImg from "@/assets/service-train-bridge.jpg";
 
 const services = [
   {
-    icon: TrendingUp,
     title: "Market Assessment & Business Expansion",
     description:
       "We evaluate opportunities for entering new markets or expanding existing operations, providing you with actionable insights to grow your business.",
+    image: europeMapImg,
   },
   {
-    icon: Target,
     title: "Targeted Commercial Development",
     description:
       "We help you build new commercial contacts in key sectors identified by you or suggested by our team, ensuring that every opportunity aligns with your business goals.",
+    image: euSymbolImg,
   },
   {
-    icon: Briefcase,
     title: "Mission Organization & Management",
     description:
       "Our team organizes and manages business missions, facilitating valuable meetings and partnerships that drive growth.",
+    image: frankfurtImg,
   },
   {
-    icon: Flag,
     title: "Strategic Trade Show Amplification",
     description:
       "Our team helps you choose the right trade show for your goals and arrange the best way of representation, logistics, side events, potential customer visits.",
+    image: euFlagsImg,
   },
   {
-    icon: Megaphone,
     title: "Marketing & Communication Strategy",
     description:
       "We develop effective marketing and communication initiatives to strengthen your presence and impact in international markets.",
+    image: trainBridgeImg,
   },
 ];
 
@@ -49,25 +55,31 @@ export function WhatWeDo() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="group p-6 rounded-xl bg-card border-l-4 border-l-primary shadow-sm hover:shadow-md transition-shadow animate-fade-in-up"
+              className="group bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-elegant transition-shadow duration-300 animate-fade-in-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                  <service.icon className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
+              {/* Image */}
+              <div className="relative overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-36 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
+              </div>
+
+              {/* Content */}
+              <div className="p-5">
+                <h3 className="text-xl font-bold text-foreground mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  {service.description}
+                </p>
               </div>
             </div>
           ))}
