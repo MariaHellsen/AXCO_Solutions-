@@ -2,6 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Globe, Users, Languages, Network, MapPin } from "lucide-react";
+import teamPhoto from "@/assets/team-photo.jpeg";
 
 const highlights = [
   { icon: Globe, label: "20+ Years Experience" },
@@ -51,14 +52,15 @@ const AboutPage = () => {
               </div>
             </div>
 
-            {/* Image Placeholder */}
+            {/* Team Photo */}
             <div className="order-1 lg:order-2">
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 border-2 border-dashed border-slate-300">
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-400">
-                  <Users className="w-16 h-16 mb-4" />
-                  <span className="text-lg font-medium">Team Photo</span>
-                  <span className="text-sm">Placeholder for image</span>
-                </div>
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                <img 
+                  src={teamPhoto} 
+                  alt="AXCO Solutions team at trade fair" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
               </div>
             </div>
           </div>
