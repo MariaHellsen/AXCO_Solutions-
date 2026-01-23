@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Globe, Users, Languages, Network, MapPin } from "lucide-react";
 import teamPhoto from "@/assets/team-photo.jpeg";
+import networkMeeting from "@/assets/network-meeting.png";
 
 const highlights = [
   { icon: Globe, label: "20+ Years Experience" },
@@ -127,13 +128,14 @@ const AboutPage = () => {
       <section className="py-12 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
-            {/* Image Placeholder */}
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 border-2 border-dashed border-slate-300">
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-400">
-                <Globe className="w-16 h-16 mb-4" />
-                <span className="text-lg font-medium">Network Visual</span>
-                <span className="text-sm">Placeholder for image</span>
-              </div>
+            {/* Network Image */}
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <img 
+                src={networkMeeting} 
+                alt="Business professionals in a meeting" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
             </div>
 
             {/* Content */}
