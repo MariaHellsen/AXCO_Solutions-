@@ -10,7 +10,7 @@ const navigation = {
     { name: "Trade Fair Support", href: "/services#events" },
   ],
   company: [
-    { name: "About AXCO", href: "/about" },
+    { name: "About AXCO", href: "/" },
     { name: "Service Packages", href: "/approach" },
     { name: "Industries", href: "/industries" },
   ],
