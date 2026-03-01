@@ -21,27 +21,26 @@ const AboutPage = () => {
       {/* Hero Section - Split Layout */}
       <section className="bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center py-12">
-            {/* Content */}
-            <div className="order-2 lg:order-1">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-1 bg-primary rounded-full" />
-                <span className="text-sm font-medium text-primary uppercase tracking-wider">About Us</span>
-              </div>
-              <h1 className="text-3xl font-bold text-foreground leading-tight tracking-tight mb-6">
-                Unlock Your Business Potential with Our Expertise in European Markets
-              </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                We are a passionate team of technology enthusiasts with over 20 years of experience 
-                driving business growth across Europe in the IT and Physical Security sectors.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Our expertise blends cutting-edge sales, marketing, and strategic know-how with a deep 
-                technical understanding of the industry.
-              </p>
-              
-              {/* Highlights */}
-              <div className="grid grid-cols-2 gap-4 mt-8">
+          <div className="max-w-4xl mx-auto py-12">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-1 bg-primary rounded-full" />
+              <span className="text-sm font-medium text-primary uppercase tracking-wider">About Us</span>
+            </div>
+            <h1 className="text-3xl font-bold text-foreground leading-tight tracking-tight mb-6">
+              Unlock Your Business Potential with Our Expertise in European Markets
+            </h1>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+              We are a passionate team of technology enthusiasts with over 20 years of experience 
+              driving business growth across Europe in the IT and Physical Security sectors.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Our expertise blends cutting-edge sales, marketing, and strategic know-how with a deep 
+              technical understanding of the industry.
+            </p>
+
+            {/* Highlights + Photo */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-8">
+              <div className="grid grid-cols-2 gap-4">
                 {highlights.map((item) => (
                   <div key={item.label} className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -51,10 +50,7 @@ const AboutPage = () => {
                   </div>
                 ))}
               </div>
-            </div>
 
-            {/* Team Photo */}
-            <div className="order-1 lg:order-2">
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                 <img 
                   src={teamPhoto} 
