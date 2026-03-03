@@ -18,20 +18,40 @@ const ContactPage = () => {
     message: "",
   });
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby98m54OHQEplp_faa5iClN7DMq-5SG1rCRDGiLTgUjqrgmRSPEQmZqg_lAO2QAH-hL/exec";
+
+
+    const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+       try {
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors', // Important for Google Apps Script
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
+      // With no-cors mode, we assume success if no error is thrown
+      toast({
+        title: "Message sent!",
+        description: "We'll get back to you within 24 hours.",
+      });
 
-    setFormData({ name: "", email: "", company: "", phone: "", message: "" });
-    setIsSubmitting(false);
+      setFormData({ name: "", email: "", company: "", phone: "", message: "" });
+      
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
