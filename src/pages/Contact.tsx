@@ -18,7 +18,7 @@ const ContactPage = () => {
     message: "",
   });
 
-  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzBUb2HSfNnboC8rKKBckXKniRsn_rdZzfVJG7Shlhr9_gQNXqtqEPe1to9deIwLuSO/exec";
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwjWPSWAQH1XA8dk5JCwpETO3O-GJ8hDLyLuPCFHgbjJeOUJ8B6Hks9P4na186MFTpu/exec";
 
 
     const handleSubmit = async (e: React.FormEvent) => {
