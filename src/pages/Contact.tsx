@@ -18,7 +18,7 @@ const ContactPage = () => {
     message: "",
   });
 
-  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby8oVRFJxJigIouJxCv3hVJTqnfg2jqujfBPDG2iALFLwiaqyI4wWm-0opwmUEjJNla/exec";
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzBUb2HSfNnboC8rKKBckXKniRsn_rdZzfVJG7Shlhr9_gQNXqtqEPe1to9deIwLuSO/exec";
 
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -30,7 +30,7 @@ const ContactPage = () => {
         method: 'POST',
         mode: 'no-cors', // Important for Google Apps Script
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'text/plain',
         },
         body: JSON.stringify(formData),
       });
