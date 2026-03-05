@@ -25,25 +25,30 @@ const ContactPage = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-       try {
+    try {
       const response = await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
-        mode: 'no-cors', // Important for Google Apps Script
+        // mode: 'no-cors', // Remove this to handle CORS properly
         headers: {
-          'Content-Type': 'text/plain',
+          'Content-Type': 'application/json', // Change to application/json
         },
         body: JSON.stringify(formData),
       });
 
-      // With no-cors mode, we assume success if no error is thrown
-      toast({
-        title: "Message sent!",
-        description: "We'll get back to you within 24 hours.",
-      });
+      const result = await response.json();
 
-      setFormData({ name: "", email: "", company: "", phone: "", message: "" });
+      if (result.result === 'success') {
+        toast({
+          title: "Message sent!",
+          description: "We'll get back to you within 24 hours.",
+        });
+        setFormData({ name: "", email: "", company: "", phone: "", message: "" });
+      } else {
+        throw new Error(result.error || 'Unknown error from server');
+      }
       
     } catch (error) {
+      console.error("Submission error:", error);
       toast({
         title: "Error",
         description: "Something went wrong. Please try again.",
